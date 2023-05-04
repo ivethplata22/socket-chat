@@ -1,3 +1,3 @@
-# WebServer + RestServer
+# WebServer + RestServer + Socket Auth
 
-Recuerden que deben de ejecutar ```npm install``` para reconstruir los módulos de Node.
+Socket para autenticación
