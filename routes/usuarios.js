@@ -17,6 +17,7 @@ const { usuariosGet,
         usuariosPost,
         usuariosDelete,
         usuariosPatch } = require('../controllers/usuarios');
+const { Role } = require('../models');
 
 const router = Router();
 
@@ -51,8 +52,17 @@ router.delete('/:id',[
 
 router.patch('/', usuariosPatch );
 
+// router.patch('/', async (req, res) => {
+//     const { rol } = req.body;
 
+//     if(!rol)
+//         return res.status(400).json({msg: 'El rol obligatorio'});
 
-
+//     const role = new Role({ rol });
+//     await role.save();
+//     return res.status(200).json({
+//         rol
+//     })
+// });
 
 module.exports = router;
